@@ -1,0 +1,19 @@
+{
+  "name": "flash-usdt",
+  "version": "1.0.0",
+  "description": "Flash USDT - A USDT-mimicking ERC20 token with Hardhat",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy:local": "npx hardhat run scripts/deploy.js --network localhost",
+    "deploy:hardhat": "npx hardhat run scripts/deploy.js",
+    "node": "npx hardhat node"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "hardhat": "^2.19.4"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.1"
+  }
+}
