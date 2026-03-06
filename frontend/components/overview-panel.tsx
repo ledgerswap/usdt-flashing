@@ -7,7 +7,7 @@ import { formatUSDT, shortenAddress } from "@/lib/utils";
 import type { ContractInfo, WalletInfo } from "@/lib/web3";
 import {
   Coins, Clock, Fuel, ShieldCheck, Pause, Play,
-  Zap, TrendingUp, Lock, Unlock,
+  Zap, TrendingUp, Lock, Unlock, Wallet,
 } from "lucide-react";
 
 interface Props {
