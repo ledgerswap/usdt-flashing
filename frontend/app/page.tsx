@@ -9,7 +9,9 @@ import { FlashHistoryPanel } from "@/components/flash-history-panel";
 import { AdminPanel } from "@/components/admin-panel";
 import { fetchContractInfo, fetchWalletInfo, fetchFlashTransfers, getConnectedAddress } from "@/lib/web3";
 import type { ContractInfo, WalletInfo, FlashRecord } from "@/lib/web3";
-import { Zap, LayoutDashboard, SendHorizontal, History, Shield } from "lucide-react";
+import { Zap, LayoutDashboard, SendHorizontal, History, Shield, Rocket } from "lucide-react";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   const [account, setAccount] = useState<string | null>(null);
@@ -72,7 +74,15 @@ export default function Home() {
               <p className="text-xs text-muted-foreground">Flash Transaction Dashboard</p>
             </div>
           </div>
-          <WalletConnect account={account} onConnect={handleConnect} loading={loading} />
+          <div className="flex items-center gap-3">
+            <Link href="/setup">
+              <Button variant="outline" size="sm" className="gap-2">
+                <Rocket className="w-4 h-4" />
+                <span className="hidden sm:inline">Deploy Contract</span>
+              </Button>
+            </Link>
+            <WalletConnect account={account} onConnect={handleConnect} loading={loading} />
+          </div>
         </div>
       </header>
 
